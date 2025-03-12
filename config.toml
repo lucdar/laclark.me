@@ -7,6 +7,10 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
 
+title = "lucdar"
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
+
 [slugify]
 paths = "on"
 
@@ -17,4 +21,21 @@ highlight_code = true
 highlight_theme = "ayu-dark"
 
 [extra]
-# Put all your custom variables here
+
+theme = "toggle"
+
+fancy_code = true
+mathjax = true
+mathjax_dollar_inline_enable = true
+
+socials = [
+  { name = "github", url = "https://github.com/lucdar/", icon = "github" },
+  { name = "soundcloud", url = "https://soundcloud.com/lucdar/", icon = "soundcloud" },
+]
+
+menu = [
+  { name = "/about", url = "/about", weight = 1 },
+  { name = "/blog", url = "/blog", weight = 2 },
+  { name = "/projects", url = "/projects", weight = 3 },
+  { name = "/music", url = "/music", weight = 4 },
+]
