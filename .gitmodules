@@ -3,4 +3,4 @@
 	url = https://github.com/lucdar/apollo
 [submodule "tools/price-adjustment-calculator"]
 	path = tools/price-adjustment-calculator
-	url = git@github.com:lucdar/price-adjustment-calculator.git
+	url = https://github.com/lucdar/price-adjustment-calculator.git
