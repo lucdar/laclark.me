@@ -10,7 +10,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: init and update submodules
-        runs: git submodule update --init --recursive --remote
+        run: git submodule update --init --recursive --remote
       # Build price-adjustment-calculator
       - uses: oven-sh/setup-bun@v2
       - name: build price-adjustment-calculator
