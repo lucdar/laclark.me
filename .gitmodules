@@ -1,3 +1,6 @@
 [submodule "apollo"]
 	path = themes/apollo
 	url = https://github.com/lucdar/apollo
+[submodule "price-adjustment-calculator"]
+	path = tools/price-adjustment-calculator
+	url = git@github.com:lucdar/price-adjustment-calculator.git

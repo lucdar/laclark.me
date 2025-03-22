@@ -1,4 +1,4 @@
-# On every push this script is executed
+# Execute this workflow on every push
 on: push
 name: Build and deploy GH Pages
 jobs:
@@ -6,9 +6,24 @@ jobs:
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
     steps:
+      # Checkout repository and submodules
       - name: checkout
         uses: actions/checkout@v4
-      - name: build_and_deploy
+        with:
+          submodules: true
+      # Build price-adjustment-calculator
+      - uses: oven-sh/setup-bun@v2
+      - name: build price-adjustment-calculator
+        run: |
+          cd tools/price-adjustment-calculator
+          bun install && bun run build
+          cd ../
+      - name: add price-adjustment-calculator to static/tools
+        run: |
+          mkdir static/tools/
+          mv tools/price-adjustment-calculator/dist/ static/tools/price-adjustment-calculator/
+      # Build Zola site & deploy to gh-pages branch
+      - name: zola build and deploy
         uses: shalzz/zola-deploy-action@master
         env:
           # Target branch
