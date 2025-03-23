@@ -16,23 +16,26 @@ Science, and after being accepted to UC Berkeley, I did some research and realiz
 major!
 
 Most of the required courses for my Music major were surprisingly traditional. For example, in my
-first semester I took piano lessons wiht the university. For my repertoire, I selected
+first semester I took piano lessons with the university. For my repertoire, I selected
 [Henry Cowell - The Voice of Lir](https://youtu.be/Z1tGjbq-ilI) (1922) and an arrangement of
-[Yu-Peng Chen - Moon in One's Cup](https://youtu.be/dy4UGBxH9do) from Genshin Impact (2020). I later
-found out that the jury who judged my playing at the end of the next semester didn't like this
-selection because they were from the same
-["era"](https://en.wikipedia.org/wiki/Dates_of_classical_music_eras) of classical music. Though, not
-all the courses were like this. I really liked my discussion-based upper-division music history
-class which was focused on the Vinyl LP, and I also took a class with
-[CNMAT](https://cnmat.berkeley.edu/) that taught Max MSP which was really eye-opening.
+[Yu-Peng Chen - Moon in One's Cup](https://youtu.be/dy4UGBxH9do) from Genshin Impact (2020). The
+jury who evaluated my playing at the end of the semester didn't like this selection because they
+were from the same ["era"](https://en.wikipedia.org/wiki/Dates_of_classical_music_eras) of classical
+music. I felt this was a very reductive approach, especially since the style, techniques, and
+context of the pieces were very different (art music vs. video game music). I did take some music
+classes that approached music with a more _modern_ mindset. I look back fondly on my
+discussion-based upper-division music history class which was focused on the Vinyl LP and the ways
+it changed the way we interact with music. I also took a class with
+[CNMAT](https://cnmat.berkeley.edu/) that taught Max MSP, a visual-programming music synthesis
+program which was fascinating to learn about and use.
 
 My undergraduate Computer Science courses were challenging but very rewarding. The content was
 sometimes hard to grasp, but once I wrapped my head around them I could see the applications even
 beyond programming. One common theme in the Linear Algebra courses I took was
 [change of basis](https://en.wikipedia.org/wiki/Change_of_basis). In essence, this is the idea that
 we can do a reversible action to change our perspective on a problem, making it easier to solve.
-This is something that is broadly applpicable to many problems and is generally a fun abstraction to
-ponder.
+This is something that is broadly applpicable outside of linear algebra and is generally a fun
+abstraction to ponder.
 
 I definitely leaned into my computer science coursework more than Music, but I don't regret my music
 major. It was refreshing to be studying two subjects that were quiet different, and I think it
@@ -50,10 +53,10 @@ machine that I upgraded with modern hardware and ITGmania. Starting Dance Games 
 me how I could use my technical skills to make a difference in peoples' lives, and really sparked my
 passion for finding ways to iterate on existing systems to make them better.
 
-I have a some personal [projects](./projects) that I've been working on in my free time. Usually, my
-programming projects are sparked when I notice a , and I use this opportunity to learn and practice
-a technology that I've been wanting to learn more about. (wafflecord and price-adjustment-calculator
-are two examples of this).
+I have a some personal projects that I've been working on in my free time. Usually, my programming
+projects are sparked when I encounter a problem that could be addressed with technology, and I use
+this opportunity to learn and practice a technology that I've been wanting to learn more about.
+(wafflecord and price-adjustment-calculator are two examples of this).
 
-I also really enjoy cooking, playing video games with my friends online, and listening to
-Northerlion's expertly crafted banter while doing chores.
+I also enjoy cooking, playing video games with my friends online, and listening to Northerlion's
+expertly crafted banter while doing chores.
