@@ -36,6 +36,10 @@ socials = [
 menu = [
   { name = "/about", url = "/about", weight = 1 },
   { name = "/contact", url = "/contact", weight = 2 },
-  { name = "/blog", url = "/blog", weight = 3 },
-  { name = "/music", url = "https://old.laclark.me/music", weight = 4 },
+  #   { name = "/blog", url = "/blog", weight = 3 },
+  #   { name = "/music", url = "/music", weight = 4 },
 ]
+
+[extra.analytics.goatcounter]
+user = "lucdar"
+host = "laclark.me"
