@@ -44,4 +44,3 @@ enabled = true
 
 [extra.analytics.goatcounter]
 user = "lucdar"
-host = "laclark.me"
