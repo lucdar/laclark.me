@@ -29,7 +29,9 @@ mathjax_dollar_inline_enable = true
 
 socials = [
   { name = "github", url = "https://github.com/lucdar/", icon = "github" },
-  { name = "soundcloud", url = "https://soundcloud.com/lucdar/", icon = "soundcloud" },
+  { name = "linkedin", url = "https://linkedin.com/in/lucdar/", icon = "linkedin" },
+  { name = "email", url = "mailto:laclark2020@gmail.com", icon = "email" },
+  # { name = "soundcloud", url = "https://soundcloud.com/lucdar/", icon = "soundcloud" },
 ]
 
 menu = [

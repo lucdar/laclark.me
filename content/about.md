@@ -7,6 +7,11 @@ Hello! I'm Lucas Clark. I'm a recent graduate from UC Berkeley where I studied C
 Music. I'm fascinated by the relationship people have with technology, and I enjoy thinking about
 ways that I can simplify, ease, or otherwise improve it.
 
+I'm currently looking for a full-time position in Software Engineering, Information Technology, or
+any other field where I can empower people through technology. You can download my resume
+[here](<../Lucas Clark - Resume.pdf>). If you (or someone you know) is looking to hire someone like
+me, please [let me know](@/contact.md)!
+
 # Education
 
 I graduated from University of California, Berkeley with two degrees: a B.A. in Computer Science
