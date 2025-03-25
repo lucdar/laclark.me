@@ -3,6 +3,9 @@ title = "Price Adjustment Calculator"
 date = "2025-03-22"
 +++
 
+[Price Adjustment Calculator](https://laclark.me/tools/price-adjustment-calculator)
+([source code](https://github.com/lucdar/price-adjustment-calculator))
+
 # The Problem
 
 Imagine you're a business owner who recently started accepting credit & debit
