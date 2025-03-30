@@ -43,7 +43,7 @@ This is something that is broadly applpicable outside of linear algebra and is g
 abstraction to ponder.
 
 I definitely leaned into my computer science coursework more than Music, but I don't regret my music
-major. It was refreshing to be studying two subjects that were quiet different, and I think it
+major. It was refreshing to be studying two subjects that were quite different, and I think it
 helped me become more well-rounded as a person.
 
 # Hobbies
