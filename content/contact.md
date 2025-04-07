@@ -6,5 +6,5 @@ path = "contact"
 Want to get in touch? You can reach me through any of the following channels:
 
 - Email: `laclark2020@gmail.com`
-- Signal: `lucdar`
+- Signal: `lucdar.64`
 - Discord: `lucdar`
