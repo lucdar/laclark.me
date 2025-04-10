@@ -4,12 +4,12 @@ path = "about"
 +++
 
 Hello! I'm Lucas Clark. I'm a recent graduate from UC Berkeley where I studied Computer Science and
-Music. I'm fascinated by the relationship people have with technology, and I enjoy thinking about
+Music. I'm fascinated by the relationship people have with technology, and I love thinking about
 ways that I can simplify, ease, or otherwise improve it.
 
 I'm currently looking for a full-time position in Software Engineering, Information Technology, or
 any other field where I can empower people through technology. You can download my resume
-[here](<../Lucas Clark - Resume.pdf>). If you (or someone you know) is looking to hire someone like
+[here](<../Lucas Clark - Resume.pdf>). If you or someone you know is looking to hire someone like
 me, please [let me know](@/contact.md)!
 
 # Education
@@ -34,34 +34,34 @@ it changed the way we interact with music. I also took a class with
 [CNMAT](https://cnmat.berkeley.edu/) that taught Max MSP, a visual-programming music synthesis
 program which was fascinating to learn about and use.
 
-My undergraduate Computer Science courses were challenging but very rewarding. The content was
+My undergraduate Computer Science courses were challenging but rewarding. The content was
 sometimes hard to grasp, but once I wrapped my head around them I could see the applications even
 beyond programming. One common theme in the Linear Algebra courses I took was
 [change of basis](https://en.wikipedia.org/wiki/Change_of_basis). In essence, this is the idea that
-we can do a reversible action to change our perspective on a problem, making it easier to solve.
+we can perform a reversible action to change our perspective on a problem, making it easier to solve.
 This is something that is broadly applpicable outside of linear algebra and is generally a fun
 abstraction to ponder.
 
-I definitely leaned into my computer science coursework more than Music, but I don't regret my music
-major. It was refreshing to be studying two subjects that were quite different, and I think it
+I leaned a little more into computer science than music, but I don't regret my music
+major. It was refreshing to be studying two subjects that were quite different, and it
 helped me become more well-rounded as a person.
 
 # Hobbies
 
 Currently, my main hobby is playing [ITGmania](https://itgmania.com), an open-source,
 community-driven version of Dance Dance Revolution. In high school I designed and built a miniature
-dance pad for the hyper-efficient stamina gameplay style. You watch me play and see it in action on
+dance pad for the hyper-efficient stamina gameplay style. You can watch me play and see it in action on
 my [Twitch](https://twitch.tv/lucdar). While at UC Berkeley I started
 [Dance Games at Berkeley](https://dancegames.studentorg.berkeley.edu), a club focused on
-arcade-style dance games. I found funding and space for our club's own Dance Dance Revolution
+arcade-style dance games. I raised funding and secured space for our club's own Dance Dance Revolution
 machine that I upgraded with modern hardware and ITGmania. Starting Dance Games at Berkeley showed
-me how I could use my technical skills to make a difference in peoples' lives, and really sparked my
+me how I could apply my technical skills to make a difference in peoples' lives, and it sparked my
 passion for finding ways to iterate on existing systems to make them better.
 
-I have a some personal projects that I've been working on in my free time. Usually, my programming
+I have some personal projects that I've been working on in my free time. Usually, my programming
 projects are sparked when I encounter a problem that could be addressed with technology, and I use
 this opportunity to learn and practice a technology that I've been wanting to learn more about.
 (wafflecord and price-adjustment-calculator are two examples of this).
 
-I also enjoy cooking, playing video games with my friends online, and listening to Northerlion's
+I also like to cook, play video games with my friends online, and listen to Northerlion's
 expertly crafted banter while doing chores.

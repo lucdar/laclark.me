@@ -8,7 +8,7 @@ date = "2025-03-22"
 
 # The Problem
 
-Imagine you're a business owner who recently started accepting credit & debit
+Imagine you're a business owner who recently started accepting credit and debit
 cards. The company processing these payments keeps a small percentage (5%) of
 transactions you submit to them. Your current price is \\$10, and you want to
 find a new price that will still net you the same amount. First, you try
@@ -51,14 +51,14 @@ as low as \\$10.66 (the price that would net you exactly \\$10).
 # Deriving a Formula
 
 Ideally, we'd like to be able to use our desired revenue and the various fee and
-tax amounts to compute our adjusted price. We can represent the revenue
-transaction as a system of equations, and derive a formula for computing the
-adjusted price.
+tax amounts to compute our adjusted price. We can represent the transaction as a
+system of equations, and derive a formula for computing the adjusted price.
 
 ## Definitions
 
-First, Let's define the variables and equations that we'll be working with. For
-brevity, percentages are represented as numbers between 0 and 1.
+First, let's define the variables and equations that we'll be working with. For
+brevity, percentages are represented as numbers between 0 and 1. (e.g. 25% =
+0.25)
 
 Variables:
 
@@ -82,7 +82,7 @@ Equations:
 ## Derivation
 
 Now, starting with the final equation in the previous section, we can repeatedly
-substitute & simplify to achieve our desired result ($P$ = something).
+substitute and simplify to achieve our desired result ($P$ = something).
 
 $$
   \begin{aligned}
@@ -113,7 +113,7 @@ at, and it's not very easy to use. Manually inputting each value in a calculator
 is tedious, and it's easy to forget to use parentheses for the denominator. To
 make it more accessible, I developed
 [a website](https://laclark.me/tools/price-adjustment-calculator) which displays
-the correctly adjusted price based on the inputs to the required fields. I had
+the correctly adjusted price based on the inputs to the required fields. I've
 been learning React, a TypeScript library for creating user interfaces, and it
 felt like the right situation to practice my new skills. The above equation can
 very easily be translated into TypeScript:
@@ -129,12 +129,12 @@ React's `useState` hook. When any of them changes, the `listedPrice` is
 re-computed and the results are updated on the web page. This allow users to
 instantly see how changes in their inputs affect the results.
 
-<!-- add image here -->
+<!-- add image here? -->
 
 I also added a breakdown of the math (similar to the first equations in this
 post) so users could see how the revenue was being calculated. Showing these
 calculations allows users to really understand what's going on. I want them to
-ask themselves "Hang on, does this really work out?" I believe this question is
+ask themselves "Hang on, does this really work out?" I feel this question is
 especially important today where people
 ([including programmers](https://maximilian-schwarzmueller.com/articles/vibe-coding-is-not-my-future/))
 regularly copy-paste from LLMs without taking the time to read and comprehend
