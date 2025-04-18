@@ -17,7 +17,7 @@ you or someone you know is looking to hire someone like me, please
 # Education
 
 I graduated from University of California, Berkeley with two degrees: a B.A. in
-Computer Science form the College of Computing, Data Science, and Society; and a
+Computer Science from the College of Computing, Data Science, and Society; and a
 B.A. in Music from the College of Letters and Sciences. In High School, I was
 torn between whether I should study Music or Computer Science, and after being
 accepted to UC Berkeley, I did some research and realized I could double major!
