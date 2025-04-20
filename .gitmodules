@@ -1,11 +1,11 @@
 [submodule "apollo"]
 	path = themes/apollo
-	url = git@github.com:lucdar/apollo.git
+	url = https://github.com/lucdar/apollo.git
 [submodule "price-adjustment-calculator"]
 	path = static/tools/price-adjustment-calculator
-	url = git@github.com:lucdar/price-adjustment-calculator.git
+	url = https://github.com/lucdar/price-adjustment-calculator.git
 	branch = dist
 [submodule "bpm"]
 	path = static/tools/bpm
-	url = git@github.com:lucdar/bpm.git
+	url = https://github.com/lucdar/bpm.git
 	branch = dist
