@@ -14,7 +14,7 @@ jobs:
       - name: Update submodules
         run: git submodule update --init --recursive --remote
       - name: Remove .git files from tools/static
-        run: find static/tools -type d -name ".git" -exec rm -rf {} +
+        run: find static/tools -type f -name ".git" -exec rm -rf {} +
       - name: build and deploy with Zola
         uses: shalzz/zola-deploy-action@master
         env:
