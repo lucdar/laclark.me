@@ -14,7 +14,9 @@ jobs:
       - name: Update submodules
         run: git submodule update --init --recursive --remote
       - name: Move tools to static/tools
-        run: mv tools/* static/tools/
+        run: |
+          mkdir static/tools/
+          mv tools/* static/tools/
       - name: build and deploy with Zola
         uses: shalzz/zola-deploy-action@master
         env:
