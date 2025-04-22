@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Update submodules
         run: git submodule update --init --recursive --remote
-      - name: Remove .git files from tools/static
-        run: find static/tools -type f -name ".git" -exec rm -rf {} +
+      - name: Move tools to static/tools
+        run: mv tools/* static/tools/
       - name: build and deploy with Zola
         uses: shalzz/zola-deploy-action@master
         env:
