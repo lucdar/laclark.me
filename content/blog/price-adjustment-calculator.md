@@ -12,7 +12,7 @@ Imagine you're a business owner who recently started accepting credit and debit
 cards. The company processing these payments keeps a small percentage (5%) of
 transactions you submit to them. Your current price is \\$10, and you want to
 find a new price that will still net you the same amount. First, you try
-increasing your prices by the same percentage that the processor witholds.
+increasing your prices by the same percentage that the processor withholds.
 
 - New Price: \\$10.00 × 105% = \\$10.50
 - Processing Fee: \\$10.50 × 5% = \\$0.52
@@ -152,7 +152,7 @@ address this, I decided to use randomized testing to see if I could find a case
 where the values were different.
 
 I used Rust to write my tests since I knew the built-in testing framework was
-easy to set up and use. The test I wrote generates random values for all of the
+easy to set up and use. The test I wrote generates random values for all the
 inputs within a reasonable range, calculates the adjusted price and resulting
 revenue, and checks to see if the desired revenue and actual revenue are equal.
 This gets repeated 10,000,000 times, and if the revenues are ever unequal, it
