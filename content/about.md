@@ -46,7 +46,7 @@ Linear Algebra courses I took was
 [change of basis](https://en.wikipedia.org/wiki/Change_of_basis). In essence,
 this is the idea that we can perform a reversible action to change our
 perspective on a problem, making it easier to solve. This is something that is
-broadly applpicable outside of linear algebra and is generally a fun abstraction
+broadly applicable outside of linear algebra and is generally a fun abstraction
 to ponder.
 
 I leaned a little more into computer science than music, but I don't regret my
@@ -70,8 +70,7 @@ passion for finding ways to iterate on existing systems to make them better.
 I have some personal projects that I've been working on in my free time.
 Usually, my programming projects are sparked when I encounter a problem that
 could be addressed with technology, and I use this opportunity to learn and
-practice a technology that I've been wanting to learn more about. (wafflecord
-and price-adjustment-calculator are two examples of this).
+practice a technology that I've been wanting to learn more about.
 
 I also like to cook, play video games with my friends online, and listen to
-Northerlion's expertly crafted banter while doing chores.
+Northernlion's expertly crafted banter while doing chores.
