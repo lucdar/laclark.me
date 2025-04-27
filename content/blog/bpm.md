@@ -77,8 +77,8 @@ pub fn direct_count(offsets: &[u64]) -> f64 {
 
 The direct approach above works reasonably well, but we're ignoring a lot of our
 data. Instead of just fitting a line to first and last data point, we can find
-the line that fits our data the best. The notion of _fitting our data the best_
-isn't mathematically precise, and there are many different approaches we could
+the line that fits all of our data the best. The notion of fitting a function to
+data is called regression, and there are many different approaches we could
 take.
 
 The underlying model of our data is a linear equation:
@@ -97,23 +97,115 @@ subtracting the actual measurement by the computed measurement and squaring it.
 
 $$ (y_i - (mx_i + b))^2 $$
 
-Why are we squaring the error? We want all the error values to be positive so
-when we add them up across all our data points they accumulate instead of
-canceling out. Technically, absolute value would also do this, but squaring the
-error makes the math _much_ easier.
+The line that minimizes this error across all of our data is the least-squares
+regression line.
 
-{% note(clickable=true, header="The Math") %}
+Why are we squaring the error? All the error values should be positive so when
+we add them up across all our data points they accumulate instead of canceling
+out. Technically, absolute value would also do this, but squaring the error
+makes the math _much_ easier.
 
-test
+{% note(clickable=true, header="The Math", hidden=true, center=true) %}
 
-<!-- TODO: this isn't working :(((( -->
+These calculations have been adapted from professor James Kirchner's
+[Data Analysis Toolkit #10](https://seismo.berkeley.edu/~kirchner/eps_120/Toolkits/Toolkit_10.pdf).
+These notes were critical in solidifying my understanding of least-squares (for
+the scalar case).
+
+We want to find a value of $ m $ that minimizes the cost function, $ Q $:
+
+$$
+    Q = \sum\limits_{i=0}^n{(y_i - (mx_i + b))^2}
+$$
+
+We can take the partial derivative of $ Q $ for both $ b $ and $ m $ and set it
+to 0 to find the minimum values.
+
+$$
+\begin{aligned}
+    \frac{\delta Q}{\delta b} = \sum\limits_{i=0}^n -2(y_i - b - mx_i) &= 0 \\\\
+    2(nb + m\sum\limits_{i=0}^n x_i - \sum\limits_{i=0}^n y_i) &= 0 \\\\
+    b + \frac{m}{n}\sum\limits_{i=0}^n x_i - \frac{1}{n}\sum\limits_{i=0}^n y_i &= 0 \\\\
+    b + m\bar{x} - \bar{y} &= 0
+\end{aligned}
+$$
+
+$$
+b = \bar{y} - m\bar{x}
+$$
+
+This illustrates an interesting property of the line of least squares: it always
+travels through the point $ (\bar{x}, \bar{y}) $, the mean of our data. Now,
+let's take the partial derivative with respect to $ m $:
+
+$$
+\begin{aligned}
+    \frac{\delta Q}{\delta b} = \sum\limits_{i=0}^n -2x_i(y_i - b - mx_i) &= 0 \\\\
+    \sum\limits_{i=0}^n -2(y_ix_i - bx_i - mx_i^2) &= 0 \\\\
+\end{aligned}
+$$
+
+Substituting the value for $ b $ from earlier:
+
+$$
+\begin{aligned}
+    \sum\limits_{i=0}^n -2(y_ix_i - (\bar{y} - m\bar{x})x_i - mx_i^2) &= 0 \\\\
+    -2 \sum\limits_{i=0}^n (y_ix_i - \bar{y}x_i + m(\bar{x}x_i - x_i^2)) &= 0 \\\\
+    \sum\limits_{i=0}^n (y_ix_i - \bar{y}x_i) - m\sum\limits_{i=0}^n(x_i^2 - \bar{x}x_i) &= 0
+\end{aligned}
+$$
+
+We can rewrite the above to solve for m:
+
+$$
+m = \frac
+    {\sum\limits_{i=0}^n (y_ix_i - \bar{y}x_i)}
+    {\sum\limits_{i=0}^n (x_i^2 - \bar{x}x_i)}
+  = \frac
+    {\sum\limits_{i=0}^n (y_ix_i) - \bar{y}\sum\limits_{i=0}^n x_i}
+    {\sum\limits_{i=0}^n (x_i^2) - \bar{x}\sum\limits_{i=0}^n x_i}
+  = \frac
+    {\sum\limits_{i=0}^n x_i y_i - n\bar{x}\bar{y}}
+    {\sum\limits_{i=0}^n x_i^2 - n\bar{x}^2}
+$$
 
 {% end %}
 
-The slope can be computed by the following equation.
+The result of the math above is the following equation:
 
-Since the data points are processed one-by-one, it would be possible to write an
-algorithm that stores the current values for
+$$
+    m = \frac
+    {\sum\limits_{i=0}^n{x_i y_i} - n\bar{x}\bar{y}}
+    {\sum\limits_{i=0}^n{x_i^2} - n\bar{x}^2}
+$$
+
+And here's the implementation of this formula in Rust:
+
+```Rust
+pub fn simple_regression(offsets: &[u64]) -> f64 {
+    let (sum_x, sum_x_squared, sum_xy) = offsets
+        .iter()
+        .enumerate()
+        .fold((0_u64, 0_u64, 0_u64), |(sx, sxx, sxy), (y, x)| {
+            (sx + x, sxx + x * x, sxy + (y as u64) * x)
+        });
+
+    let n = offsets.len() as f64;
+    let mean_x = sum_x as f64 / n;
+    let mean_y = (n - 1_f64) / 2_f64;
+
+    let slope = // beats per millisecond
+        (sum_xy as f64 - n * mean_x * mean_y) /
+        (sum_x_squared as f64 - n * mean_x * mean_x);
+
+    slope * 60_000_f64
+}
+```
+
+Since the data points are processed one-by-one, it's quite easy to implement
+this as a streaming algorithm. Because the performance of the $ O(n) $ algorithm
+wasn't prohibitive to the website, I decided this would be a preemptive
+optimization.
 
 ## Thiel-Sen Estimator
 

@@ -26,6 +26,7 @@ theme = "toggle"
 fancy_code = true
 mathjax = true
 mathjax_dollar_inline_enable = true
+dynamic_note = true
 
 socials = [
   { name = "github", url = "https://github.com/lucdar/", icon = "github" },
