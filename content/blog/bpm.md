@@ -209,7 +209,46 @@ optimization.
 
 ## Thiel-Sen Estimator
 
-When browsing the Wikipedia page for Linear Regression,
+When doing research on Linear regression, I learned about the Thiel-Sen
+estimator. If you look at every distinct pair of points, you can draw a line
+that connects them. From this set of lines, if you take the median slope and
+y-intercept and use these to form a linear equation, the resulting estimator
+generally fits the data quite well, and is very resistant to outliers!
+
+This algorithm's strengths come from using the median as the mechanism for
+representing the data. Compared to the mean (the "average"), the median (the
+middle value when sorted) isn't affected as much by an extreme value. For the
+purposes of the website, if you accidentally tap too early or late but keep the
+correct number of beats, the Thiel-Sen estimator will be more accurate than the
+simple linear regression.
+
+Like previously, here's the
+
+```Rust
+pub fn thiel_sen(offsets: &[u64]) -> Result<f64, BpmCalculationError> {
+    let mut slopes: Vec<_> = offsets
+        .iter()
+        .enumerate()
+        .tuple_combinations()
+        // indices (number of beats) are the y-values
+        .map(|((y1, x1), (y2, x2))| (y2 - y1) as f64 / (x2 - x1) as f64)
+        .collect();
+    let mid = slopes.len() / 2;
+    let (_left, median, _right) = slopes.select_nth_unstable_by(mid, |a, b| a.total_cmp(b));
+
+    Ok(*median * 60_000_f64)
+}
+```
+
+The number of possible pairs of points grows quite quickly (caused by the call
+to
+[tuple_combinations](https://docs.rs/itertools/latest/itertools/trait.Itertools.html#method.tuple_combinations)),
+so the performance of this algorithm is $ O(n^2) $. Like the simple linear
+regression case, this too is avoidable. You can randomly sample from the pairs
+of points, and there is a more efficient (but more complicated) implementation
+that runs in $ O (n \log n) $ time. Once again, since the website ran smoothly
+without these optimizations I figured it would be hasty for me to implement a
+more efficient algorithm.
 
 # Design
 
