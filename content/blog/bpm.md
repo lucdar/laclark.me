@@ -213,10 +213,32 @@ When browsing the Wikipedia page for Linear Regression,
 
 # Design
 
-<!-- TODO: rs1n's Super Metroid guide -->
-<!-- https://gamefaqs.gamespot.com/snes/588741-super-metroid/faqs/10114 -->
+When writing the basic functionality of the site I was a little torn on how I
+wanted it to look. I kept things simple (no CSS) while I worked on building out
+the functionality, and then I spent an afternoon deciding on a visual
+style/direction. I felt inspired by my terminal, and thought that monospace was
+an aesthetic I wanted to see in tools for non-developers (like this one). I
+opened Microsoft Notepad and started experimenting with the layout.
 
-<!-- terminal aesthetics -->
-<!-- leptos, ChatGPT -->
+While adding descriptions to the end of each BPM prediction two of them happened
+to be the same line length. This coincidence always brings me a very specific
+kind of satisfaction, but I also remembered that it didn't have to be a
+coincidence.
 
-# Deployment
+A few years ago, I saw someone post this guide
+[this guide](https://gamefaqs.gamespot.com/snes/588741-super-metroid/faqs/10114)
+to speedrunning Super Metroid by rs1n. At first glance it seems pretty normal,
+but if you look closely, you'll realize that the words and punctuation were
+carefully chosen so that each line is exactly the same length.
+
+I decided that I would follow in rs1n's footsteps (the first few, at the very
+least) and force each of the labels to be the same length so they would all line
+up neatly and provide a straight right edge, giving a more structured feeling to
+the interface. I had to compromise on semantics and clarity, but I think the end
+result looks pretty cool!
+
+Given enough time and flexibility with the exact idea that you want to convey, I
+think it's generally possible to re-word most passages to be fully-justified
+monospace. The English language is surprisingly capable when it comes to this
+specific task, and I think it was a pretty fun exercise. You should try it out
+sometime!
