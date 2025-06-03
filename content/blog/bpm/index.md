@@ -297,7 +297,7 @@ that I want to share.
 
 For example, if you know anything about web development, you might be wondering
 why all my code snippets are in Rust instead of JavaScript. To build this
-website, I used [Leptos](leptos.dev) - a Rust web framework that compiles to
+website, I used [Leptos](https://leptos.dev) - a Rust web framework that compiles to
 WebAssembly! I really enjoyed using it and Rust's type system in the context of
 this project and I am excited to tinker around with it some more!
 
