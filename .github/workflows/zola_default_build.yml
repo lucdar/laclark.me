@@ -15,8 +15,7 @@ jobs:
         run: git submodule update --init --recursive --remote
       - name: Move tools to static/tools
         run: |
-          # Uncomment if static/tools/ becomes untracked
-          # mkdir static/tools/
+          mkdir -p static/tools/
           mv tools/* static/tools/
       - name: build and deploy with Zola
         uses: shalzz/zola-deploy-action@master
