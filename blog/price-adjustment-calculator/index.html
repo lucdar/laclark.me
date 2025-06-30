@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base" content="https:&#x2F;&#x2F;laclark.me">
+
+    
+
+    
+    
+    
+        <title>
+            
+                Price Adjustment Calculator
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="Price Adjustment Calculator" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://laclark.me/fonts.css rel="stylesheet" />
+    
+
+    
+    
+        
+
+        
+            
+            
+
+            <script data-goatcounter="https://lucdar.goatcounter.com/count"
+                    async
+                    src="https://laclark.me/js/count.js"></script>
+            <noscript>
+                
+                <img src="https://lucdar.goatcounter.com//count?p=&#x2F;blog&#x2F;price-adjustment-calculator&#x2F;&t=Price Adjustment Calculator">
+            </noscript>
+        
+    
+
+    
+    <script src=https://laclark.me/js/codeblock.js></script>
+
+    
+    
+
+    
+    
+        <script src=https://laclark.me/js/note.js></script>
+    
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate"
+          type="application/atom+xml"
+          title="lucdar"
+          href="https://laclark.me/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://laclark.me/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://laclark.me/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://laclark.me/js/themetoggle.js></script>
+
+        
+            <script>setTheme(getSavedTheme());</script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://laclark.me/main.css" />
+
+    
+
+    <script defer
+                    src="https://laclark.me/search_index.en.js?h=60dcb1683839dcdff5c9"></script>
+        <script defer
+                src="https://laclark.me/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
+
+
+    <body>
+        <div class="content">
+            <header>
+    <div class="main">
+        
+            <a href=https:&#x2F;&#x2F;laclark.me>lucdar</a>
+        
+
+
+        <div class="socials">
+            
+                <a rel="me" href="https:&#x2F;&#x2F;github.com&#x2F;lucdar&#x2F;" class="social">
+                    <img alt="github"
+                         src="https://laclark.me/icons/social/github.svg">
+                </a>
+            
+                <a rel="me" href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;lucdar&#x2F;" class="social">
+                    <img alt="linkedin"
+                         src="https://laclark.me/icons/social/linkedin.svg">
+                </a>
+            
+                <a rel="me" href="mailto:laclark2020@gmail.com" class="social">
+                    <img alt="email"
+                         src="https://laclark.me/icons/social/email.svg">
+                </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+            <a href=https://laclark.me/about style="margin-left: 0.25em">&#x2F;about</a>
+        
+            <a href=https://laclark.me/contact style="margin-left: 0.25em">&#x2F;contact</a>
+        
+            <a href=https://laclark.me/blog style="margin-left: 0.25em">&#x2F;blog</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://laclark.me/icons/search.svg"
+                     alt="Search"
+                     class="search-icon">
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">Search</h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox"></div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://laclark.me/icons/sun.svg"
+                     id="sun-icon"
+                     style="filter: invert(1)"
+                     alt="Light" />
+                <img src=https://laclark.me/icons/moon.svg id="moon-icon" alt="Dark" />
+            </a>
+
+            <!-- Inititialize the theme toggle icons -->
+            <script>updateItemToggleTheme()</script>
+        
+    </nav>
+</header>
+
+
+            
+            
+    
+    <main>
+        <article>
+            <div class="title">
+                
+                
+    <div class="page-header">
+        Price Adjustment Calculator<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+                        Posted on <time>2025-03-22</time>
+                    
+
+                    
+
+                    
+
+                    :: 1198 Words
+
+                    
+                    
+
+                    
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            
+            
+
+            <section class="body">
+                <p><a href="https://laclark.me/tools/price-adjustment-calculator">Price Adjustment Calculator</a>
+(<a href="https://github.com/lucdar/price-adjustment-calculator">source code</a>)</p>
+<h1 id="the-problem"><a class="zola-anchor" href="#the-problem" aria-label="Anchor link for: the-problem">The Problem</a></h1>
+<p>Imagine you're a business owner who recently started accepting credit and debit
+cards. The company processing these payments keeps a small percentage (5%) of
+transactions you submit to them. Your current price is \$10, and you want to
+find a new price that will still net you the same amount. First, you try
+increasing your prices by the same percentage that the processor withholds.</p>
+<ul>
+<li>New Price: \$10.00 × 105% = \$10.50</li>
+<li>Processing Fee: \$10.50 × 5% = \$0.52</li>
+<li>Revenue \$10.50 - \$0.52 = \$9.98</li>
+</ul>
+<p>Hmm... you're two cents short. 5% of \$10.00 is less than 5% of \$10.50, so
+that makes sense. At this point, you remember that you want to charge sales tax,
+as well, which makes things even worse.</p>
+<ul>
+<li>New Price: \$10.00 × 105% = \$10.50</li>
+<li>Sales Tax: \$10.50 × 10% = \$1.05</li>
+<li>Processing Fee: \$11.55 × 5% = \$0.58</li>
+<li>Revenue: \$11.55 - \$1.05 - \$0.58 = \$9.92</li>
+</ul>
+<p>Now you're eight cents short and can feel a headache starting... But then you
+get an email! It's from your payment processor informing you of a new fixed
+\$0.05 fee added to each transaction <em>on top</em> of the percentage fee. Oh, and
+your product is packaged in cans which means they incur an additional \$0.10
+flat tax in addition to sales tax. At this point, you decide to just raise your
+price by a dollar to try and offset these fees because you simply can't be
+bothered to figure it out on your own.</p>
+<ul>
+<li>New Price: \$10.00 + \$1.00 = \$11.00</li>
+<li>Taxes: \$11.00 × 10% + \$0.50 = \$1.60</li>
+<li>Processing Fee: \$12.60 × 5% + \$0.05 = \$0.68</li>
+<li>Revenue: \$12.60 - \$1.60 - \$0.68 = \$10.32</li>
+</ul>
+<p>Now you've overshot it by \$0.32. You could probably try a lower price instead,
+but who has the time to figure that out? Whatever. The new price is \$11.00.</p>
+<p>This situation is especially troublesome in markets where pricing is the main
+point of competition. Your new price of \$11.00 could mean fewer sales because
+a competitor priced their product at \$10.75 even though you'd be willing to go
+as low as \$10.66 (the price that would net you exactly \$10).</p>
+<h1 id="deriving-a-formula"><a class="zola-anchor" href="#deriving-a-formula" aria-label="Anchor link for: deriving-a-formula">Deriving a Formula</a></h1>
+<p>Ideally, we'd like to be able to use our desired revenue and the various fee and
+tax amounts to compute our adjusted price. We can represent the transaction as a
+system of equations, and derive a formula for computing the adjusted price.</p>
+<h2 id="definitions"><a class="zola-anchor" href="#definitions" aria-label="Anchor link for: definitions">Definitions</a></h2>
+<p>First, let's define the variables and equations that we'll be working with. For
+brevity, percentages are represented as numbers between 0 and 1. (e.g. 25% =
+0.25)</p>
+<p>Variables:</p>
+<ul>
+<li>$ P $ - Price of the good</li>
+<li>$ T $ - Total taxes</li>
+<li>$ t_p $ - Percent-based tax</li>
+<li>$ t_f $ - Fixed tax</li>
+<li>$ U $ - Total processing fee</li>
+<li>$ u_p $ - Percent-based processing fee</li>
+<li>$ u_f $ - Fixed processing fee</li>
+<li>$ S $ - Amount submitted to payment processor</li>
+<li>$ R $ - Revenue from the sale</li>
+</ul>
+<p>Equations:</p>
+<ul>
+<li>Taxes $ T = P t_p + t_f $</li>
+<li>Amount submitted $ S = P + T $</li>
+<li>Processing fee $ U = S u_p + u_f $</li>
+<li>Revenue $ R = S - T - U $</li>
+</ul>
+<h2 id="derivation"><a class="zola-anchor" href="#derivation" aria-label="Anchor link for: derivation">Derivation</a></h2>
+<p>Now, starting with the final equation in the previous section, we can repeatedly
+substitute and simplify to achieve our desired result ($P$ = something).</p>
+<p>$$
+\begin{aligned}
+R &amp;= S - T - U \\
+&amp;= (P + T) - T - U \\
+&amp;= P - U \\
+&amp;= P - (S u_p + u_f) \\
+&amp;= P - (P + T) u_p - u_f \\
+&amp;= P - P u_p - (P t_p + t_f) u_p - u_f \\
+&amp;= P - P u_p - P t_p u_p - t_f u_p - u_f \\
+R &amp;= P (1 - u_p - t_p u_p) - t_f u_p - u_f \\
+R + t_f u_p + u_f &amp;= P (1 - u_p - t_p u_p) \\
+\frac{R + t_f u_p + u_f}{1 - u_p - t_p u_p} &amp;= P \\
+\end{aligned}
+$$</p>
+<p>And there we have it! An equation for $P$ in terms of $R$, $t_p$, $t_f$, $u_p$,
+and $u_f$:</p>
+<p>$$
+\boxed{P = \frac{R + t_f u_p + u_f}{1 - u_p - t_p u_p}}
+$$</p>
+<h1 id="a-friendlier-interface"><a class="zola-anchor" href="#a-friendlier-interface" aria-label="Anchor link for: a-friendlier-interface">A Friendlier Interface</a></h1>
+<p>This equation is nice, but it's a little scary for the average person to look
+at, and it's not very easy to use. Manually inputting each value in a calculator
+is tedious, and it's easy to forget to use parentheses for the denominator. To
+make it more accessible, I developed
+<a href="https://laclark.me/tools/price-adjustment-calculator">a website</a> which displays
+the correctly adjusted price based on the inputs to the required fields. I've
+been learning React, a TypeScript library for creating user interfaces, and it
+felt like the right situation to practice my new skills. The above equation can
+very easily be translated into TypeScript:</p>
+<pre data-lang="TypeScript" style="background-color:#0f1419;color:#bfbab0;" class="language-TypeScript "><code class="language-TypeScript" data-lang="TypeScript"><span style="color:#ff7733;">const </span><span>listedPrice </span><span style="color:#f29668;">=
+</span><span>  (revenue </span><span style="color:#f29668;">+ </span><span>fixedProcessFee </span><span style="color:#f29668;">+ </span><span>fixedTax </span><span style="color:#f29668;">* </span><span>percentProcessFee) </span><span style="color:#f29668;">/
+</span><span>  (</span><span style="color:#f29718;">1 </span><span style="color:#f29668;">- </span><span>percentProcessFee </span><span style="color:#f29668;">- </span><span>percentProcessFee </span><span style="color:#f29668;">* </span><span>percentTax)</span><span style="color:#bfbab0cc;">;
+</span></code></pre>
+<p>The variables on the right side of the equation are stored as <em>state</em> using
+React's <code>useState</code> hook. When any of them changes, the <code>listedPrice</code> is
+re-computed and the results are updated on the web page. This allow users to
+instantly see how changes in their inputs affect the results.</p>
+<!-- add image here? -->
+<p>I also added a breakdown of the math (similar to the first equations in this
+post) so users could see how the revenue was being calculated. Showing these
+calculations allows users to really understand what's going on. I want them to
+ask themselves "Hang on, does this really work out?" I feel this question is
+especially important today where people
+(<a href="https://maximilian-schwarzmueller.com/articles/vibe-coding-is-not-my-future/">including programmers</a>)
+regularly copy-paste from LLMs without taking the time to read and comprehend
+their output.</p>
+<h1 id="testing-a-suspected-corner-case"><a class="zola-anchor" href="#testing-a-suspected-corner-case" aria-label="Anchor link for: testing-a-suspected-corner-case">Testing a Suspected Corner Case</a></h1>
+<p>While implementing this calculation breakdown, I made the decision to round
+prices to the nearest cent after each step. That made sense to me since that's
+how the calculations work in practice (I've never seen fractions of a cent on
+receipts). However, I only perform rounding on the final result when calculating
+the listed price with the equation we derived above. I wondered if this could
+produce a discrepancy between the desired revenue and the actual revenue. To
+address this, I decided to use randomized testing to see if I could find a case
+where the values were different.</p>
+<p>I used Rust to write my tests since I knew the built-in testing framework was
+easy to set up and use. The test I wrote generates random values for all the
+inputs within a reasonable range, calculates the adjusted price and resulting
+revenue, and checks to see if the desired revenue and actual revenue are equal.
+This gets repeated 10,000,000 times, and if the revenues are ever unequal, it
+prints some diagnostic data and stops execution. I ran the test, waited 40
+seconds, and was happy to see all ten million iterations passed! I now felt
+confident that the rounding didn't introduce inconsistencies.</p>
+<h1 id="conclusion"><a class="zola-anchor" href="#conclusion" aria-label="Anchor link for: conclusion">Conclusion</a></h1>
+<p>As of right now, I don't have anything else that I want to add to the
+calculator. I'm not sure how much use it will end up seeing, but I'm happy with
+how it turned out. I'd love to hear any suggestions or stories about how my work
+helped you, so feel free to <a href="https://laclark.me/contact/">reach out</a>! In the meantime, I'm
+looking forward to working on other projects, and I'm excited to write more Rust
+as it's quickly becoming my favorite programming language.</p>
+<!-- Fixed processing fees are usually per-transaction rather than per-item, so if a
+customer buys more than one item in a single transaction, you may _overshoot_
+the desired revenue for that transaction. One way to adjust for this is to
+divide the fixed processing fee by the average number of items per transaction. -->
+
+            </section>
+        </article>
+    </main>
+
+
+
+            
+                
+            
+
+            
+
+            
+        </div>
+    </body>
+
+</html>
