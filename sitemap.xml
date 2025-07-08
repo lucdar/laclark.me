@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://laclark.me/</loc>
+    </url>
+    <url>
+        <loc>https://laclark.me/about/</loc>
+    </url>
+    <url>
+        <loc>https://laclark.me/blog/</loc>
+    </url>
+    <url>
+        <loc>https://laclark.me/blog/bpm/</loc>
+        <lastmod>2025-03-22</lastmod>
+    </url>
+    <url>
+        <loc>https://laclark.me/blog/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://laclark.me/blog/price-adjustment-calculator/</loc>
+        <lastmod>2025-03-22</lastmod>
+    </url>
+    <url>
+        <loc>https://laclark.me/contact/</loc>
+    </url>
+    <url>
+        <loc>https://laclark.me/tags/</loc>
+    </url>
+</urlset>

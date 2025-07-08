@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" class="dark light">
+
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="base" content="https:&#x2F;&#x2F;laclark.me">
+
+    
+
+    
+    
+    
+        <title>
+            
+                About me
+            
+        </title>
+
+        
+            <meta property="og:title"
+                  content="About me" />
+        
+    
+
+    
+        
+    
+
+    
+        
+    
+
+    
+    
+
+    
+    
+        <link href=https://laclark.me/fonts.css rel="stylesheet" />
+    
+
+    
+    
+        
+
+        
+            
+            
+
+            <script data-goatcounter="https://lucdar.goatcounter.com/count"
+                    async
+                    src="https://laclark.me/js/count.js"></script>
+            <noscript>
+                
+                <img src="https://lucdar.goatcounter.com//count?p=&#x2F;about&#x2F;&t=About me">
+            </noscript>
+        
+    
+
+    
+    <script src=https://laclark.me/js/codeblock.js></script>
+
+    
+    
+
+    
+    
+        <script src=https://laclark.me/js/note.js></script>
+    
+
+    
+        
+            <script>
+            MathJax = {
+              tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+              }
+            };
+            </script>
+        
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+    
+
+    
+    <link rel="alternate"
+          type="application/atom+xml"
+          title="lucdar"
+          href="https://laclark.me/atom.xml">
+
+
+    
+    
+        <link rel="stylesheet"
+              type="text/css"
+              href="https://laclark.me/theme/light.css" />
+        <link id="darkModeStyle"
+              rel="stylesheet"
+              type="text/css"
+              href="https://laclark.me/theme/dark.css" />
+    
+
+    <!-- Set the correct theme in the script -->
+
+    
+        <script src=https://laclark.me/js/themetoggle.js></script>
+
+        
+            <script>setTheme(getSavedTheme());</script>
+        
+    
+
+
+    <link rel="stylesheet"
+          type="text/css"
+          media="screen"
+          href="https://laclark.me/main.css" />
+
+    
+
+    <script defer
+                    src="https://laclark.me/search_index.en.js?h=60dcb1683839dcdff5c9"></script>
+        <script defer
+                src="https://laclark.me/js/searchElasticlunr.min.js?h=3626c0ef99daa745b31e"></script></head>
+
+
+    <body>
+        <div class="content">
+            <header>
+    <div class="main">
+        
+            <a href=https:&#x2F;&#x2F;laclark.me>lucdar</a>
+        
+
+
+        <div class="socials">
+            
+                <a rel="me" href="https:&#x2F;&#x2F;github.com&#x2F;lucdar&#x2F;" class="social">
+                    <img alt="github"
+                         src="https://laclark.me/icons/social/github.svg">
+                </a>
+            
+                <a rel="me" href="https:&#x2F;&#x2F;linkedin.com&#x2F;in&#x2F;lucdar&#x2F;" class="social">
+                    <img alt="linkedin"
+                         src="https://laclark.me/icons/social/linkedin.svg">
+                </a>
+            
+                <a rel="me" href="mailto:laclark2020@gmail.com" class="social">
+                    <img alt="email"
+                         src="https://laclark.me/icons/social/email.svg">
+                </a>
+            
+        </div>
+    </div>
+
+    <nav>
+        
+            <a href=https://laclark.me/about style="margin-left: 0.25em">&#x2F;about</a>
+        
+            <a href=https://laclark.me/contact style="margin-left: 0.25em">&#x2F;contact</a>
+        
+            <a href=https://laclark.me/blog style="margin-left: 0.25em">&#x2F;blog</a>
+        
+
+        
+            <button id="search-button"
+                    class="search-button"
+                    title="$SHORTCUT to open search">
+                <img src="https://laclark.me/icons/search.svg"
+                     alt="Search"
+                     class="search-icon">
+            </button>
+
+            <div id="searchModal"
+                 class="search-modal js"
+                 role="dialog"
+                 aria-labelledby="modalTitle">
+                <div id="modal-content">
+                    <h1 id="modalTitle" class="page-header">Search</h1>
+                    <div id="searchBar">
+                        <input id="searchInput"
+                               role="combobox"
+                               autocomplete="off"
+                               spellcheck="false"
+                               aria-expanded="false"
+                               aria-controls="results-container"
+                               placeholder="Search..." />
+                        <button id="clear-search" class="clear-button" title="Clear search">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                                <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="results-container">
+                        <div id="results-info">
+                            <span id="zero_results" style="display: none;">No results</span>
+                            <span id="one_result" style="display: none;">1 result</span>
+                            <span id="many_results" style="display: none;">$NUMBER results</span>
+                        </div>
+                        <div id="results" role="listbox"></div>
+                    </div>
+                </div>
+            </div>
+        
+
+        
+            <a id="dark-mode-toggle"
+               onclick="toggleTheme(); event.preventDefault();"
+               href="#">
+                <img src="https://laclark.me/icons/sun.svg"
+                     id="sun-icon"
+                     style="filter: invert(1)"
+                     alt="Light" />
+                <img src=https://laclark.me/icons/moon.svg id="moon-icon" alt="Dark" />
+            </a>
+
+            <!-- Inititialize the theme toggle icons -->
+            <script>updateItemToggleTheme()</script>
+        
+    </nav>
+</header>
+
+
+            
+            
+    
+    <main>
+        <article>
+            <div class="title">
+                
+                
+    <div class="page-header">
+        About me<span class="primary-color" style="font-size: 1.6em">.</span>
+    </div>
+
+
+                <div class="meta">
+                    
+
+                    
+
+                    
+
+                    :: 690 Words
+
+                    
+                    
+
+                    
+                    
+
+                    
+
+                </div>
+            </div>
+
+            
+
+            
+            
+
+            <section class="body">
+                <p>Hello! I'm Lucas Clark. I'm a recent graduate from UC Berkeley where I studied
+Computer Science and Music. I'm fascinated by the relationship people have with
+technology, and I love thinking about ways that I can simplify, ease, or
+otherwise improve it.</p>
+<p>I'm currently looking for a full-time position in Software Engineering,
+Information Technology, or any other field where I can empower people through
+technology. You can download my resume <a href="../Lucas%20Clark%20-%20Resume.pdf">here</a>. If
+you or someone you know is looking to hire someone like me, please
+<a href="https://laclark.me/contact/">let me know</a>!</p>
+<h1 id="education">Education</h1>
+<p>I graduated from University of California, Berkeley with two degrees: a B.A. in
+Computer Science from the College of Computing, Data Science, and Society; and a
+B.A. in Music from the College of Letters and Sciences. In High School, I was
+torn between whether I should study Music or Computer Science, and after being
+accepted to UC Berkeley, I did some research and realized I could double major!</p>
+<p>Most of the required courses for my Music major were surprisingly traditional.
+For example, in my first semester I took piano lessons with the university. For
+my repertoire, I selected
+<a href="https://youtu.be/Z1tGjbq-ilI">Henry Cowell - The Voice of Lir</a> (1922) and an
+arrangement of <a href="https://youtu.be/dy4UGBxH9do">Yu-Peng Chen - Moon in One's Cup</a>
+from Genshin Impact (2020). The jury who evaluated my playing at the end of the
+semester didn't like this selection because they were from the same
+<a href="https://en.wikipedia.org/wiki/Dates_of_classical_music_eras">"era"</a> of
+classical music. I felt this was a very reductive approach, especially since the
+style, techniques, and context of the pieces were very different (art music vs.
+video game music). I did take some music classes that approached music with a
+more <em>modern</em> mindset. I look back fondly on my discussion-based upper-division
+music history class which was focused on the Vinyl LP and the ways it changed
+the way we interact with music. I also took a class with
+<a href="https://cnmat.berkeley.edu/">CNMAT</a> that taught Max MSP, a visual-programming
+music synthesis program which was fascinating to learn about and use.</p>
+<p>My undergraduate Computer Science courses were challenging but rewarding. The
+content was sometimes hard to grasp, but once I wrapped my head around them I
+could see the applications even beyond programming. One common theme in the
+Linear Algebra courses I took was
+<a href="https://en.wikipedia.org/wiki/Change_of_basis">change of basis</a>. In essence,
+this is the idea that we can perform a reversible action to change our
+perspective on a problem, making it easier to solve. This is something that is
+broadly applicable outside of linear algebra and is generally a fun abstraction
+to ponder.</p>
+<p>I leaned a little more into computer science than music, but I don't regret my
+music major. It was refreshing to be studying two subjects that were quite
+different, and it helped me become more well-rounded as a person.</p>
+<h1 id="hobbies">Hobbies</h1>
+<p>Currently, my main hobby is playing <a href="https://itgmania.com">ITGmania</a>, an
+open-source, community-driven version of Dance Dance Revolution. In high school
+I designed and built a miniature dance pad for the hyper-efficient stamina
+gameplay style. You can watch me play and see it in action on my
+<a href="https://twitch.tv/lucdar">Twitch</a>. While at UC Berkeley I started
+<a href="https://dancegames.studentorg.berkeley.edu">Dance Games at Berkeley</a>, a club
+focused on arcade-style dance games. I raised funding and secured space for our
+club's own Dance Dance Revolution machine that I upgraded with modern hardware
+and ITGmania. Starting Dance Games at Berkeley showed me how I could apply my
+technical skills to make a difference in peoples' lives, and it sparked my
+passion for finding ways to iterate on existing systems to make them better.</p>
+<p>I have some personal projects that I've been working on in my free time.
+Usually, my programming projects are sparked when I encounter a problem that
+could be addressed with technology, and I use this opportunity to learn and
+practice a technology that I've been wanting to learn more about.</p>
+<p>I also like to cook, play video games with my friends online, and listen to
+Northernlion's expertly crafted banter while doing chores.</p>
+
+            </section>
+        </article>
+    </main>
+
+
+
+            
+                
+            
+
+            
+
+            
+        </div>
+    </body>
+
+</html>

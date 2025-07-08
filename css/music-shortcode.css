@@ -1,0 +1,59 @@
+/* CSS for the music shortcode */
+/* see templates/shortcodes/music.html */
+.album-container {
+    display: flow-root;
+    margin-bottom: 2rem;
+}
+
+.album-cover {
+    float: left;
+    width: 35%;
+    max-width: 250px;
+    margin-right: 2rem;
+    margin-mottom: 1rem
+}
+
+.album-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.album-details {
+    
+}
+
+.album-details h2 {
+    margin-top: 0;
+    font-size: 1.75rem;
+}
+
+.album-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.album-links a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .album-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .album-cover {
+        max-width: 100%;
+    }
+}
