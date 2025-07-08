@@ -230,7 +230,7 @@ simple linear regression.
 Here's the implementation in Rust:
 
 ```Rust
-pub fn thiel_sen(offsets: &[u64]) -> Result<f64, BpmCalculationError> {
+pub fn thiel_sen(offsets: &[u64]) -> f64, BpmCalculationError {
     let mut slopes: Vec<_> = offsets
         .iter()
         .enumerate()
@@ -241,7 +241,7 @@ pub fn thiel_sen(offsets: &[u64]) -> Result<f64, BpmCalculationError> {
     let mid = slopes.len() / 2;
     let (_left, median, _right) = slopes.select_nth_unstable_by(mid, |a, b| a.total_cmp(b));
 
-    Ok(*median * 60_000_f64)
+    *median * 60_000_f64
 }
 ```
 
