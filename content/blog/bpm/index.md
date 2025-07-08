@@ -230,7 +230,7 @@ simple linear regression.
 Here's the implementation in Rust:
 
 ```Rust
-pub fn thiel_sen(offsets: &[u64]) -> f64, BpmCalculationError {
+pub fn thiel_sen(offsets: &[u64]) -> f64 {
     let mut slopes: Vec<_> = offsets
         .iter()
         .enumerate()
